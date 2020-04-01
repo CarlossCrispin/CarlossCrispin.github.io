@@ -1,0 +1,262 @@
+/* selectores */
+/*  p{
+   color: red;
+}
+.red{
+   background-color: red;
+   height: 100px;
+   width: 200px;
+}
+#boton-pago{
+   background-color: yellow;
+}
+*/
+ /* ************************************************ */
+ /* normalizar o resetear */
+/* Color Theme Swatches in Hex */
+.Great-Wave-1-hex { color: #1E3E59; }
+.Great-Wave-2-hex { color: #2B678C; }
+.Great-Wave-3-hex { color: #F2E8D5; }
+.Great-Wave-4-hex { color: #F2E0BD; }
+.Great-Wave-5-hex { color: #F2B29B; }
+
+/* Color Theme Swatches in RGBA */
+.Great-Wave-1-rgba { color: rgba(30, 62, 89, 1); }
+.Great-Wave-2-rgba { color: rgba(43, 103, 140, 1); }
+.Great-Wave-3-rgba { color: rgba(242, 232, 213, 1); }
+.Great-Wave-4-rgba { color: rgba(242, 224, 189, 1); }
+.Great-Wave-5-rgba { color: rgba(242, 178, 155, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Great-Wave-1-hsla { color: hsla(207, 49, 23, 1); }
+.Great-Wave-2-hsla { color: hsla(202, 53, 35, 1); }
+.Great-Wave-3-hsla { color: hsla(39, 52, 89, 1); }
+.Great-Wave-4-hsla { color: hsla(39, 67, 84, 1); }
+.Great-Wave-5-hsla { color: hsla(15, 76, 77, 1); }
+
+/*
+.Color-Theme-2-1-hex { color: #FFECE8; }
+.Color-Theme-2-2-hex { color: #F0C8C6; }
+.Color-Theme-2-3-hex { color: #E1C9C7; }
+.Color-Theme-2-4-hex { color: #F6E8E5; }
+.Color-Theme-2-5-hex { color: #CD7D7E; }
+
+.Color-Theme-2-1-rgba { color: rgba(255, 236, 232, 1); }
+.Color-Theme-2-2-rgba { color: rgba(240, 200, 198, 1); }
+.Color-Theme-2-3-rgba { color: rgba(225, 201, 199, 1); }
+.Color-Theme-2-4-rgba { color: rgba(246, 232, 229, 1); }
+.Color-Theme-2-5-rgba { color: rgba(205, 125, 126, 1); }
+
+
+.Color-Theme-2-1-hsla { color: hsla(10, 100, 95, 1); }
+.Color-Theme-2-2-hsla { color: hsla(2, 58, 85, 1); }
+.Color-Theme-2-3-hsla { color: hsla(4, 30, 83, 1); }
+.Color-Theme-2-4-hsla { color: hsla(10, 48, 93, 1); }
+.Color-Theme-2-5-hsla { color: hsla(359, 44, 64, 1); } */
+
+body{
+    font-family: 'Liu Jian Mao Cao', cursive;
+    font-family: 'Lobster', cursive;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #2B678C;
+
+}
+/* pseudoclases */
+a:hover{
+
+    opacity: 0.8;
+}
+
+a:active{
+    background: #2B678C;
+    color: #F2E8D5;
+}
+
+a:focus{
+    background-color: #ffc400;
+}
+
+th,h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+.container{
+    background: #F2B29B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffdde1, #F2B29B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffdde1, #F2B29B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content{
+    max-width: 960px;
+    width: 100%;
+    height: 80vh;
+    background-color: #fff;
+    /* diferenciaHorizontal, diferenciaVertical desenfoque amplitud color */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 10px;
+    position: relative;
+   
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.content{
+    padding: 1em;
+}
+td{
+    display: block;
+    width: 100%;
+}
+td:nth-of-type(1){ 
+   font-size: 1.5em;
+   font-weight: bold;
+   color: #CD7D7E;
+}
+th{
+    display: none;
+}
+.paragraph{
+    line-height: 1.8em;
+    font-weight: 300;
+}
+.fa-star{
+    color: #ffc400;
+}
+
+.table{
+    width: 100%;
+    border-spacing: 0;
+
+}
+thead{
+    background-color: #F2B29B;
+}
+
+.table td, .table th{
+    padding: 1em;
+    /* padding: left; */
+    
+ } 
+ /* pseudoclases encima del elemento */
+
+.table tr:nth-child(even){
+     background-color: #FFECE8;
+}
+
+.title-item{
+    /* border-bottom-style: solid;
+    border-width: 2px;
+    border-color: #CD7D7E; */
+
+    /* Shorthand */
+    border-bottom: solid 2px #CD7D7E;
+
+    color: #1E3E59;
+    padding-bottom: 1em;
+    /* text-align: center; */
+    font-size: 2em;
+     
+    padding-bottom: 1em;
+    /* arriba derecha abajo izquierda  */
+    /* arriba / abajo y decha / izquierda */
+    /* padding: 0 0 1em 0; */
+
+
+
+}
+.address{
+    font-weight: bold;
+    color: #2B678C;
+    margin-top:  1em;
+    display: inline-block;
+}
+.main-image{
+    float: left;
+    margin-right: 1em;
+    height: 250px;
+    
+}
+.position{
+    background-color: #CD7D7E;
+    color: #fff;
+    /* padding: 1em 2em 3em 4em; */
+    padding: 0.5em;
+    border-radius: 10px;
+    margin-right: 0.5em;
+   
+
+}
+
+
+/* 
+    especificidad mayo el peso más alta la presedencia 
+    2) style primer peso
+    1) !important sobre escribe ignorando el peso
+    pero e smala practica
+    selectores por 
+    1)id
+    2)clase,atrin+butos y pseudoclase
+    3)tipo y etiqueta pseudoelementos
+*/
+
+/* 
+    position static | relative | absolute | fixed | sticky
+
+    fixed relativo a la pantalla
+*/
+
+.actions{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+
+}
+
+.close{
+    height: 40px;
+    width: 40px;
+    color:#F2E0BD;
+    border-radius: 50%;
+    background-color: #CD7D7E;
+    display: inline-block;
+    font-weight: 300;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+@media (min-width:600px){
+    .content{
+        padding: 1.8em;
+    }
+    td{
+        display: table-cell;
+        width: auto;
+    }
+    td:nth-of-type(1){ 
+       font-size: 1em ;
+    }
+    th{
+        display: table-cell;
+    }
+}
+@media (min-height:550px){
+    .content{
+        height: 500px;
+    }
+}
+
+
