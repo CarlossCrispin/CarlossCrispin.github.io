@@ -91,7 +91,7 @@ links.forEach(function (link) {
 
         // tiempo
         setTimeout(() => {
-            location.href="/";
+            location.href="/boletines";
         }, 800);
 
         return false;
