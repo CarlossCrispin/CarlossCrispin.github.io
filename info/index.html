@@ -24,14 +24,28 @@
     />
     <!-- interno -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/png" href="./img/13.svg" />
     <title>Nueva Atzacoalco</title>
   </head>
   <body>
     <!-- dir -->
-    <i
-      class="fa fa-arrow-down middle fixed-bottom wow bounce"
-      data-wow-iteration="infinite"
-    ></i>
+    <div class="middle animated bounceInUp">
+      <i
+        class="fa fa-arrow-down wow bounce "
+        data-wow-iteration="infinite"
+      ></i>
+      <br>
+      <i
+        class="fa fa-arrow-down wow bounce "
+        data-wow-iteration="infinite"
+      ></i>
+      <br>
+      <i
+        class="fa fa-arrow-down wow bounce "
+        data-wow-iteration="infinite"
+      ></i>
+      
+    </div>
     <!-- hero -->
     <header class="hero" id="hero">
       <div>
@@ -44,8 +58,6 @@
         </h1>
         <p
           class="wow bounceInUp"
-          data-wow-delay="0.5s"
-          style="visibility: visible; -webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;"
         >
           ¿Por que ser autodidacta con el uso de las tecnologías?.
         </p>
@@ -56,7 +68,7 @@
     <nav
       class="nav navbar sticky-top navbar-expand-lg navbar-dark bg-dark py-3"
     >
-      <a class="navbar-brand" href="#hero">Nueva Atzacoalco</a>
+      <a class="navbar-brand" href="/">Nueva Atzacoalco</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -72,12 +84,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
+            <a class="nav-link" href="#ini"
+              >Inicio <span class="sr-only">(current)</span></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#auto">Autodidacta</a>
+            <a class="nav-link" href="#autodidacta">Autodidacta</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -95,8 +107,10 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#tec">Beneficios</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#autod">Autonomía</a>
+              <a class="dropdown-item" href="#autonomia">Autonomía</a>
               <a class="dropdown-item" href="#pen">Pensamiento</a>
+              <a class="dropdown-item" href="#trabajo">Trabajo</a>
+              <a class="dropdown-item" href="#flexi">Flexibilidad</a>
             </div>
           </li>
         </ul>
@@ -104,47 +118,49 @@
     </nav>
 
     <!-- main -->
-    <div class="container mt-5" id="auto">
-      <h1 class="wow bounceInDown text-center mb-4">PILARES</h1>
-      <h1 class="wow bounceInDown text-center mb-4">Nueva Atzacoalco</h1>
-      <hr />
+    <div class="container">
+      <div class="pantalla">
+        <h1 class="wow bounceInDown text-center mb-4">PILARES</h1>
+        <h1 class="wow bounceInDown text-center mb-4">Nueva Atzacoalco</h1>
+        <hr class="wow bounceInDown"/>
+      </div>
+      
 
       <div class="col-12 mt-2">
-        <div class="row">
-          <div class="col-12 col-md-6  align-self-center">
-            <h4 class="wow bounceInLeft text-center" data-wow-delay="0.5s">
+        <!-- 1 -->
+        <div class="row pantalla" id="autodidacta">
+          <div class="col-12 col-md-6  align-self-center pantalla">
+            <h4 class="wow bounceInLeft text-center">
               ¿Qué es ser una persona autodidacta?
             </h4>
-            <p class="text-justify wow bounceInLeft mt-5" data-wow-delay="1s">
+            <p class="text-justify wow bounceInLeft mt-5">
               Un autodidacta es aquel que se instruye y realiza el aprendizaje
               de nuevos conocimientos a través de sus propios medios, es decir,
-              no busca la instrucción, la enseñanza a partir de los medios
-              formales como ser la escuela, los maestros, sino que decíamos
-              aprende los nuevos conocimientos leyendo libros sobre diversas
-              matrias.
+              no busca la instrucción y la enseñanza a partir de los medios
+              tradicionales como la escuela o los maestros, sino que opta por
+              aprender los conocimientos por su propios medios (libros, medios audivisuales o el uso de la internet).
             </p>
           </div>
           <div
             class="col-12 col-md-6  wow-imgage wow animated bounceInRight"
-            data-wow-delay="1s"
-            style="visibility: visible; -webkit-animation-delay: 1s; -moz-animation-delay: 1s; animation-delay: 1s;"
           >
-            <img src="./img/read.svg" alt="read" class="img-fluid" id="tec" />
+            <img src="./img/read.svg" alt="read" class="img-fluid" />
           </div>
         </div>
-        <div class="row mt-5">
+        <!-- 2 -->
+        <div class="row pantalla" id="tec">
           <div
-            class="col-6  wow-imgage wow animated bounceInDown mt-5 align-self-center"
+            class="col-6  wow-imgage wow animated bounceInDown mt-5 align-self-center pantalla"
           >
             <img src="./img/10.png" alt="read" class="img-fluid" />
           </div>
-          <div class="col-6 align-self-center">
-            <h4 class="tex-center wow zoomIn mt-5" data-wow-delay="0.5s">
-              Beneficios del uso de la tecnología en la educación
+          <div class="col-6 align-self-center pantalla">
+            <h4 class="tex-center wow zoomIn mt-5">
+              Beneficios del uso de la tecnología en la educación.
             </h4>
             <p
               class="text-justify wow bounceInUp mt-5"
-              data-wow-delay="1s"
+              
               id="autod"
             >
               Facilita la comprensión. El uso de herramientas tecnológicas
@@ -152,36 +168,41 @@
               fácilmente. Consecuentemente, los contenidos se asimilan más
               rápido.
             </p>
-            <hr class="text-justify wow bounceInUp mt-5" data-wow-delay="1s" />
+            <hr class="text-justify wow bounceInUp mt-5"  />
           </div>
         </div>
-
-        <div class="row" id="pen">
-          <div class="col-12 col-md-6  align-self-center" id="auto">
-            <p class="text-justify wow bounceInLeft mt-5" data-wow-delay="1s">
-              Autonomía. Desarrollan el autoaprendizaje para formar personas
+        <!-- 3 -->
+        <div class="row pantalla" id="autonomia">
+          <div class="col-12 col-md-6  align-self-center pantalla" id="auto">
+            <h4 class="tex-center wow zoomIn mt-5">
+              Autonomía.
+            </h4>
+            <p class="text-justify wow bounceInLeft mt-5" >
+              Desarrollan el autoaprendizaje para formar personas
               autosuficientes capaces de resolver cualquier problema real. El
               uso de tecnologías propicia proponer estudios de casos y hacerles
               partícipes de la propia administración y gestión de los
               contenidos. Se trata de una metodología dónde se enseña a los
-              alumnos a aprender a aprender, construir su propio conocimiento.
+              aprendizs a aprender a aprender, construir su propio conocimiento.
               Además, Internet permite infinidad de fuentes de información y
               propicia la habilidad de seleccionar y gestionar la más apropiada.
             </p>
           </div>
           <div
             class="col-12 col-md-6  wow-imgage wow animated bounceInRight"
-            data-wow-delay="1s"
-            style="visibility: visible; -webkit-animation-delay: 1s; -moz-animation-delay: 1s; animation-delay: 1s;"
           >
             <img src="./img/3.svg" alt="read" class="img-fluid" />
-            <hr class="text wow bounceInRight mt-5" data-wow-delay="1s" />
+            <hr class="text wow bounceInRight mt-5"  />
           </div>
         </div>
-        <div class="row">
-          <div class="col-6 align-self-center">
-            <p class="text-justify wow bounceInLeft mt-5" data-wow-delay="1s">
-              Pensamiento crítico. Internet y las redes sociales significan
+        <!-- 4 -->
+        <div class="row pantalla" id="pen">
+          <div class="col-6 align-self-center pantalla">
+            <h4 class="tex-center wow zoomIn mt-5">
+              Pensamiento crítico.
+            </h4>
+            <p class="text-justify wow bounceInLeft mt-5" >
+              Internet y las redes sociales significan
               compartir puntos de vista y opiniones, debatir es muy importante
               cuando los cerebros se están desarrollando. Además, la enorme
               posibilidad que te da la tecnología de romper el paradigma
@@ -189,36 +210,43 @@
               conocimiento a nivel mundial, conectar con personas de otros
               países y culturas e intercambiar información.
             </p>
-            <hr class="wow bounceInLeft mt-5" data-wow-delay="1s" />
+            <hr class="wow bounceInLeft mt-5"  />
           </div>
           <div
-            class="col-6  wow-imgage wow animated bounceInRight mt-5 align-self-center"
-            data-wow-delay="0.3s"
+            class="col-6  wow-imgage wow bounceInRight align-self-center pantalla"
           >
             <img src="./img/2.svg" alt="read" class="img-fluid" />
           </div>
         </div>
-        <div class="row mt-5" id="tec">
+        <!-- 5 -->
+        <div class="row pantalla" id="trabajo">
           <div
-            class="col-12 col-md-6  wow-imgage wow animated bounceInDown mt-5"
+            class="col-12 col-md-6  wow-imgage wow animated bounceInDown pantalla"
           >
             <img src="./img/11.svg" alt="read" class="img-fluid" />
           </div>
-          <div class="col-12 col-md-6 align-self-center">
-            <p class="text-justify wow bounceInRight mt-5" data-wow-delay="1s">
-              Trabajo en equipo. La tecnología genera interacción entre los
-              alumnos y favorece el trabajo en equipo. En el ámbito profesional
+          <div class="col-12 col-md-6 align-self-center ">
+            <h4 class="tex-center wow zoomIn mt-5">
+              Trabajo en equipo. 
+            </h4>
+            <p class="text-justify wow bounceInRight mt-5" >
+              La tecnología genera interacción entre los
+              aprendizs y favorece el trabajo en equipo. En el ámbito profesional
               la mayoría de los proyectos que se desarrollan son en equipo y
               requieren la colaboración de diferentes profesionales, desarrollar
               la capacidad de trabajo en equipo ya desde niños es fundamental.
             </p>
-            <hr class="wow bounceInRight mt-5" data-wow-delay="1s" />
+            <hr class="wow bounceInRight mt-5"  />
           </div>
         </div>
-        <div class="row">
-          <div class="col-6 align-self-center">
-            <p class="text-justify wow bounceInLeft mt-5" data-wow-delay="1s">
-              Flexibilidad. Los estudiantes pueden seguir ritmos distintos en su
+        <!-- 6 -->
+        <div class="row pantalla" id="flexi">
+          <div class="col-6 align-self-center pantalla">
+            <h4 class="tex-center wow zoomIn mt-5">
+              Flexibilidad. 
+            </h4>
+            <p class="text-justify wow bounceInLeft mt-5" >
+              Los estudiantes pueden seguir ritmos distintos en su
               aprendizaje teniendo contenidos adicionales o materiales de apoyo
               dependiendo de las necesidades.
             </p>
@@ -235,7 +263,7 @@
 
     <!-- footer  -->
     <div
-      class="py-2 text-center text-light align-self-center"
+      class="py-2 text-center text-light align-self-center pantalla"
       style="background-color: #4FD1C5;"
     >
       <div class="align-self-center">
