@@ -1,0 +1,94 @@
+/* Color Theme Swatches in Hex */
+.pink-highlighter-1-hex { color: #BF7E84; }
+.pink-highlighter-2-hex { color: #D99A9A; }
+.pink-highlighter-3-hex { color: #F2BDBD; }
+.pink-highlighter-4-hex { color: #F2D5D5; }
+.pink-highlighter-5-hex { color: #FDF2F2; }
+
+/* Color Theme Swatches in RGBA */
+.pink-highlighter-1-rgba { color: rgba(191, 126, 132, 1); }
+.pink-highlighter-2-rgba { color: rgba(217, 154, 154, 1); }
+.pink-highlighter-3-rgba { color: rgba(242, 189, 189, 1); }
+.pink-highlighter-4-rgba { color: rgba(242, 213, 213, 1); }
+.pink-highlighter-5-rgba { color: rgba(253, 242, 242, 1); }
+
+/* Color Theme Swatches in HSLA */
+.pink-highlighter-1-hsla { color: hsla(354, 33, 62, 1); }
+.pink-highlighter-2-hsla { color: hsla(0, 45, 72, 1); }
+.pink-highlighter-3-hsla { color: hsla(0, 67, 84, 1); }
+.pink-highlighter-4-hsla { color: hsla(0, 52, 89, 1); }
+.pink-highlighter-5-hsla { color: hsla(0, 73, 97, 1); }
+
+/* Color Theme Swatches in Hex */
+.KD-Wedding-1-hex { color: #778C7C; }
+.KD-Wedding-2-hex { color: #4E6B5C; }
+.KD-Wedding-3-hex { color: #F2DBD5; }
+.KD-Wedding-4-hex { color: #DAA09A; }
+.KD-Wedding-5-hex { color: #62798F; }
+
+/* Color Theme Swatches in RGBA */
+.KD-Wedding-1-rgba { color: rgba(119, 140, 124, 1); }
+.KD-Wedding-2-rgba { color: rgba(78, 107, 92, 1); }
+.KD-Wedding-3-rgba { color: rgba(242, 219, 213, 1); }
+.KD-Wedding-4-rgba { color: rgba(218, 160, 154, 1); }
+.KD-Wedding-5-rgba { color: rgba(98, 121, 143, 1); }
+
+/* Color Theme Swatches in HSLA */
+.KD-Wedding-1-hsla { color: hsla(134, 8, 50, 1); }
+.KD-Wedding-2-hsla { color: hsla(148, 15, 36, 1); }
+.KD-Wedding-3-hsla { color: hsla(12, 52, 89, 1); }
+.KD-Wedding-4-hsla { color: hsla(5, 46, 72, 1); }
+.KD-Wedding-5-hsla { color: hsla(209, 18, 47, 1); }
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #62798F ;
+    color: #DAA09A;
+    text-shadow: 2px 2px 2px #F2DBD5;
+}
+
+.header-main{
+    /* background-image: url('https://image.freepik.com/foto-gratis/primer-plano-esteticista-pintando-mujer-pincel-salon_1139-1703.jpg'); */
+    background-image: url('https://img.freepik.com/foto-gratis/manos-mujer-vista-superior-diseno-geometrico_23-2148226399.jpg?size=626&ext=jpg');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    opacity: .8;
+}
+
+
+h1{
+    font-size: 3em;
+   
+}
+
+.nav-link{
+    font-size: 2em; 
+
+}
+
+.nav-home{
+    background-color: #DAA09A;
+}
+
+.letters{
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+}
+
+hr{
+    width: 30%;
+    background-color: #F2BDBD;
+    height: .3em;
+    border-bottom: .5px solid #fff;
+}
+
+.jumbotron{
+    border-left: 1em solid #778C7C;
+    color: #D99A9A;
+}
+
+.card{
+    border-left: 1em solid #778C7C; 
+}
