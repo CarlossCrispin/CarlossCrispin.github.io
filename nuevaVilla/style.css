@@ -1,0 +1,54 @@
+
+/* !important prioridad */
+.text-principal{
+    color: goldenrod !important;
+}
+
+hr{
+    background-color: goldenrod;
+}
+
+.gold{
+    border: 2px solid goldenrod;
+}
+
+.gold:hover{
+    border: 4px solid goldenrod;
+}
+
+.subir{
+    /* son validos los valores negativos  */
+    margin-top: -20vh;
+}
+.alto{
+    height: 50vh;
+}
+
+.alert-gold{
+    background-color: goldenrod;
+    color: black;
+}
+
+.text-gold{
+    color: goldenrod;
+}
+
+/* imagenes de catalogo */
+.img-pan{
+    width: 180px;
+    height: 180px;  
+    /* indica un objetico señala un objetos o elemento */
+    cursor: pointer;
+    opacity: .7;
+
+    /* 1s = 1 segundo  .1 = milisegundo .6 son 6 milisegundos */
+    transition: all .6s;
+}
+
+.img-pan:hover{
+    opacity: 1;
+    width: 200px;
+    height:200px;  
+    transition: all .6s;
+}
+
