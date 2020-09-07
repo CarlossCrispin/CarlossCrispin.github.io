@@ -1,0 +1,88 @@
+.dark-primary-color {
+  background: #00796b;
+}
+.default-primary-color {
+  background: #009688;
+}
+.light-primary-color {
+  background: #b2dfdb;
+}
+.text-primary-color {
+  color: #ffffff;
+}
+.accent-color {
+  background: #607d8b;
+}
+.primary-text-color {
+  color: #212121;
+}
+.secondary-text-color {
+  color: #757575;
+}
+.divider-color {
+  border-color: #bdbdbd;
+}
+
+.portada{
+    background-color: black;
+}
+.hero {
+  background-image: url('../img/portadafacebook.png');
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  padding: 2em;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5%;
+  opacity: .5;
+  color: yellow;
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.hero-image h1 {
+  font-size: 72px;
+  margin: 0px;
+  color: gold;
+  text-shadow: 0px 0px 4px #000;
+}
+
+.hero-image p {
+  font-size: 24px;
+  text-shadow: 0px 0px 2px #000;
+}
+
+.navbar {
+  background-color: #4fd1c5 !important;
+  opacity: 0.8;
+}
+.middle {
+  position: fixed;
+  color: #4fd1c5;
+  font-size: 1em;
+  margin-top: 80vh;
+  margin-left: 95vw;
+}
+.wow_imgage {
+  position: relative;
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 270px;
+  height: 180px;
+}
+
+hr {
+  background-color: #4fd1c5;
+  height: 0.05em;
+}
+.pantalla {
+  margin-top: 30vh;
+}

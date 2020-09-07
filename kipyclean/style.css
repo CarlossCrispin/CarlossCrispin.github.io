@@ -1,0 +1,18 @@
+.caja{
+    background-color: black;
+    display: inline-block;
+    text-align: center;
+}
+
+
+video{
+    width: 100vw;
+    opacity: .5;
+}
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
