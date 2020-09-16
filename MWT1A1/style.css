@@ -3,10 +3,7 @@ body{
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.cuadro{
-    border: 2px dotted cyan;
-    text-align: center;
-}
+
 .container{
     border: 5px solid black;
     width: 90%;
