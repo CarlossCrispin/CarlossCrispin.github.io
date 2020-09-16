@@ -5,13 +5,13 @@ body{
 }
 
 .container{
-    border: 5px solid black;
+    /* border: 5px solid black; */
     width: 90%;
     padding: 5px;
 }
 
 header{
-    border: 5px solid gold;
+    /* border: 5px solid gold; */
 }
 
 header img{
@@ -44,13 +44,13 @@ h1{
 }
 
 main{
-    border: 2px solid yellowgreen;
+    /* border: 2px solid yellowgreen; */
     margin-top: 5px;
     display: flex;
 }
 
 section{
-    border: 2px solid lightcoral;
+    /* border: 2px solid lightcoral; */
     width: 80%;
     margin: 5px;
 }
@@ -62,7 +62,7 @@ section{
     background-color: lavender;
 }
 aside{
-    border: 2px solid lightblue;
+    /* border: 2px solid lightblue; */
     width: 20%;
     margin: 5px;
 }
@@ -72,7 +72,7 @@ aside ul li{
     margin-left: -20px;
 }
 article{
-    border: 2px solid lime;
+    /* border: 2px solid lime; */
     margin: 5px;
     padding: 10px;
     display: flex;
@@ -84,7 +84,7 @@ article  img{
     width: 30%;
 }
 footer{
-    border: 2px solid ;
+    /* border: 2px solid ; */
     margin-top: 5px;
     display: flex;
     justify-content: space-evenly;
