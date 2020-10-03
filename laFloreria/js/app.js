@@ -1,6 +1,7 @@
 
 let dia, hora,
     nav = document.getElementById("nav"),
+    flecha = document.getElementById("flecha"),
     catalogo = document.getElementById("catalogo"),
     productos = document.getElementById("productos"),
     nosotros = document.getElementById("nosotros"),
@@ -62,20 +63,40 @@ let dia, hora,
 
 productos.style.display = 'none';
 nosotros.style.display = 'none';
+flecha.innerHTML = `
+            <span class="material-icons wow bounceInLeft  color-4 large" data-wow-iteration="infinite" id="row1">
+            arrow_right_alt
+            </span>
+        `;
 
-window.onscroll = function () {
-    /* console.log("Vertical: " + window.scrollY); */
+function showNav() {
+   
+    if (nav.className === 'capa capa-move') {
+        nav.classList.remove("capa-move");
 
-    if (window.scrollY > 100) {
-        nav.classList.remove("caja-nav");
-        nav.classList.add("caja-nav-move");
-        nav.classList.add("difuminar");
+        flecha.innerHTML = `
+            <span class="material-icons color-4 large"  id="row1">
+            arrow_right_alt
+            </span>
+        `;
+
+        let fle = document.getElementById("row1");
+        fle.classList.add("wow");
+        fle.classList.add("bounceInLeft");
+        fle.setAttribute("data-wow-iteration", "infinite")
+       
     } else {
-        nav.classList.add("caja-nav");
-        nav.classList.remove("caja-nav-move");
-        nav.classList.remove("difuminar");
+        nav.classList.add("capa-move");
+        flecha.innerHTML = `
+             
+        <span class="material-icons wow bounceInRight  color-4 large" data-wow-iteration="infinite" id="row2">
+          keyboard_backspace
+        </span>
+        `;
     }
-};
+    
+}
+
 
 function showArea(i) {
     if (i == 1) {
@@ -95,11 +116,11 @@ function showArea(i) {
     }
 }
 
+/* ********************* */
+/* ****** CATALOGO ***** */
+/* ********************* */
 function showCatalogo() {
-    document.getElementById("catalogo").innerHTML = `
-        <div class="container" id="caja-catalogo">
-        </div>
-    `;
+   
     let cajaCatalogo = document.getElementById("caja-catalogo");
     for (let index = 0; index < arrProductos.length; index++) {
         const element = arrProductos[index];
@@ -187,6 +208,10 @@ function showCatalogo() {
 
 showCatalogo();
 
+/* ********************* */
+/* ****** CRUD ******* */
+/* ********************* */
+
 function create() {
     fecha();
     let created = dia+hora;
@@ -233,7 +258,6 @@ function create() {
         });
     }
 }
-
 
 function read() {
     document.getElementById('contenedor-tabla').innerHTML = `
@@ -312,6 +336,7 @@ function read() {
     }
     showCatalogo() ;
 }
+read();
 function edit(index) {
     clean();
     /* let botonCrear = document.getElementById("add");
@@ -327,28 +352,6 @@ function edit(index) {
     document.getElementById('categoria').value = producto.categoria;
     document.getElementById('stock').value = producto.stock;
     showModal(producto.nombre, index);
-
-}
-
-
-function showModal(x, index) {
-    document.getElementById("but-duo").classList.remove("boton-nuevo");
-    document.getElementById("but-duo").classList.remove("boton-update");
-    // console.log(x);
-    modal.style.display = "block";
-    if (x != undefined) {
-        document.getElementById("tituloModal").innerHTML = "Actualizar producto";
-        document.getElementById("but-duo").innerHTML = "Actualizar";
-        document.getElementById("but-duo").classList.add("boton-update");
-        document.getElementById("but-duo").setAttribute("onclick", `update(${index} )`);
-
-    } else {
-        document.getElementById("tituloModal").innerHTML = "Nuevo producto";
-        document.getElementById("but-duo").innerHTML = "Guardar";
-        document.getElementById("but-duo").classList.add("boton-nuevo");
-        document.getElementById("but-duo").setAttribute("onclick", "create()");
-
-    }
 
 }
 
@@ -399,6 +402,28 @@ function borrar(element) {
         }
     })
 }
+function showModal(x, index) {
+    document.getElementById("but-duo").classList.remove("boton-nuevo");
+    document.getElementById("but-duo").classList.remove("boton-update");
+    // console.log(x);
+    modal.style.display = "block";
+    if (x != undefined) {
+        document.getElementById("tituloModal").innerHTML = "Actualizar producto";
+        document.getElementById("but-duo").innerHTML = "Actualizar";
+        document.getElementById("but-duo").classList.add("boton-update");
+        document.getElementById("but-duo").setAttribute("onclick", `update(${index} )`);
+
+    } else {
+        document.getElementById("tituloModal").innerHTML = "Nuevo producto";
+        document.getElementById("but-duo").innerHTML = "Guardar";
+        document.getElementById("but-duo").classList.add("boton-nuevo");
+        document.getElementById("but-duo").setAttribute("onclick", "create()");
+
+    }
+
+}
+
+
 function closeModal() {
     modal.style.display = "none";
     clean();
@@ -413,8 +438,6 @@ function clean() {
     document.getElementById('categoria').value = 'categoria';
     document.getElementById('stock').value = '';
 }
-
-
 
 
 /* ********************* */
@@ -478,8 +501,9 @@ function checkTime(i) {
 startTime();
 
 
-
-/* *************+ */
+/* ********************* */
+/* ****** CARRITO ******* */
+/* ********************* */
 
 let carrrito = document.getElementById("carrito"),
     cantidadSpan = document.getElementById("cantidad"),
@@ -492,21 +516,35 @@ let carrrito = document.getElementById("carrito"),
 carrrito.style.display = "none";
 
 
-
 function shoppingCart(i) {
     // console.log(i);
 
     let producto = arrProductos[i];
     
     
+    
     /* let newProduct = { ...producto, piezas: cant }
-    shooppingProducts.push(newProduct);
     let newProduct = { ...producto, piezas: cant } */
-    shooppingProducts.push(producto);
+    // shooppingProducts.push(producto);
   
     // console.table(shooppingProducts);
     
-   
+    // let a = 0;
+    shooppingProducts.push(producto);
+    // console.log(shooppingProducts.indexOf(producto.name));
+    // if (shooppingProducts.indexOf(producto.name) > -1){
+    //     for (let index = 0; index < shooppingProducts.length; index++) {
+    //         const element = shooppingProducts[index];
+    //         if (shooppingProducts[index].nombre == element.nombre) {
+    //             console.log(a++);
+
+    //         }
+    //     }
+    // }else{
+        
+    // }
+    
+    
    /*  
 
     if (shooppingProducts.includes("producto.nombre") == false) {
@@ -599,3 +637,59 @@ function readCart() {
    
   
 }
+/* function readCart() {
+    let totalPagar = 0;
+    document.getElementById("listaProductos").innerHTML =`
+    `;
+    let contenido = document.getElementById("listaProductos");
+    shooppingProducts.forEach((element) => {
+
+        // console.log(element.nombre);
+
+        let li = document.createElement("li");
+        let caja1 = document.createElement("div");
+        let caja2 = document.createElement("div");
+        let caja3 = document.createElement("div");
+        let caja4 = document.createElement("div");
+
+
+        let nombre = document.createElement("h4");
+        let contenidoN = document.createTextNode(element.nombre);
+        nombre.appendChild(contenidoN);
+        caja3.appendChild(nombre)
+
+        let precio = document.createElement("h2");
+        let contenidoP = document.createTextNode(element.precio);
+        precio.appendChild(contenidoP);
+        caja4.appendChild(precio)
+
+        
+
+        let img = document.createElement("img");
+        
+        img.setAttribute("src", element.foto);
+        caja2.appendChild(img);
+        caja1.classList.add("flex")
+       
+        caja2.classList.add("cart-img")
+        caja1.appendChild(caja2)
+
+        caja3.classList.add("cart-nombre")
+        caja1.appendChild(caja3)
+
+        caja4.classList.add("cart-precio")
+        caja1.appendChild(caja4)
+
+        totalPagar += element.precio;
+
+       
+        li.appendChild(caja1);
+        contenido.appendChild(li);
+        // console.log(totalPagar);
+    });
+    let totalShow = document.getElementById("total");
+    totalShow.innerHTML = ` TOTAL A PAGAR : ${totalPagar}`;
+   
+  
+}
+ */
