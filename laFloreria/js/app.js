@@ -63,12 +63,15 @@ let dia, hora,
 
 productos.style.display = 'none';
 nosotros.style.display = 'none';
+// catalogo.style.display = 'none';
 flecha.innerHTML = `
             <span class="material-icons wow bounceInLeft  color-4 large" data-wow-iteration="infinite" id="row1">
             arrow_right_alt
             </span>
         `;
 
+        
+read()
 function showNav() {
    
     if (nav.className === 'capa capa-move') {
@@ -206,7 +209,7 @@ function showCatalogo() {
 
 }
 
-showCatalogo();
+// showCatalogo();
 
 /* ********************* */
 /* ****** CRUD ******* */
@@ -336,7 +339,7 @@ function read() {
     }
     showCatalogo() ;
 }
-read();
+
 function edit(index) {
     clean();
     /* let botonCrear = document.getElementById("add");
@@ -517,47 +520,26 @@ carrrito.style.display = "none";
 
 
 function shoppingCart(i) {
-    // console.log(i);
-
+    
     let producto = arrProductos[i];
-    
-    
-    
-    /* let newProduct = { ...producto, piezas: cant }
-    let newProduct = { ...producto, piezas: cant } */
-    // shooppingProducts.push(producto);
-  
-    // console.table(shooppingProducts);
-    
-    // let a = 0;
+    // let newProduct = { ...producto, piezas: 1 }
+
+    // console.log(newProduct);
+    // console.log(shooppingProducts.indexOf(newProduct));
     shooppingProducts.push(producto);
-    // console.log(shooppingProducts.indexOf(producto.name));
-    // if (shooppingProducts.indexOf(producto.name) > -1){
-    //     for (let index = 0; index < shooppingProducts.length; index++) {
-    //         const element = shooppingProducts[index];
-    //         if (shooppingProducts[index].nombre == element.nombre) {
-    //             console.log(a++);
 
-    //         }
-    //     }
-    // }else{
-        
-    // }
-    
-    
-   /*  
+    /* if (shooppingProducts.indexOf(newProduct) === -1) {
+        shooppingProducts.push(newProduct);
+    } else if (shooppingProducts.indexOf(newProduct) > -1) {
 
-    if (shooppingProducts.includes("producto.nombre") == false) {
-        cant++
-        let newProduct = {...producto, piezas : cant}
-        
-        
-        console.log('La nueva colección de vegetales es: ');
-    } else if (shooppingProducts.indexOf(producto.nombre) > -1) {
-        console.log(producto.nombre + ' ya existe en la colección de verduras.');
-    }
-    */
+        let i = shooppingProducts.indexOf(newProduct);
+        let cant = shooppingProducts[i].piezas;
 
+        let newProduct = { ...newProduct, piezas: cant++ }
+        shooppingProducts[i] = newProduct;
+    } */
+    // console.table(shooppingProducts); 
+   
     count();
 
     
@@ -565,7 +547,6 @@ function shoppingCart(i) {
 
 function count() {
     cantidad++;
-    // console.log(cantidad);
     if (cantidad >= 1) {
         cantidadSpan.innerHTML = `${cantidad}`;
         carrrito.style.display = "flex";
@@ -587,7 +568,9 @@ function readCart() {
     document.getElementById("listaProductos").innerHTML =`
     `;
     let contenido = document.getElementById("listaProductos");
-    shooppingProducts.forEach((element) => {
+    for (let index = 0; index < shooppingProducts.length; index++) {
+        const element = shooppingProducts[index];
+  
 
         // console.log(element.nombre);
 
@@ -596,8 +579,14 @@ function readCart() {
         let caja2 = document.createElement("div");
         let caja3 = document.createElement("div");
         let caja4 = document.createElement("div");
+        let but = document.createElement("button");
+        let butText = document.createTextNode("X")
 
+        but.appendChild(butText);
+        but.classList.add("boton-close");
+        but.setAttribute("onClick", `quitar(${index})`);
 
+        
         let nombre = document.createElement("h4");
         let contenidoN = document.createTextNode(element.nombre);
         nombre.appendChild(contenidoN);
@@ -614,16 +603,18 @@ function readCart() {
         
         img.setAttribute("src", element.foto);
         caja2.appendChild(img);
-        caja1.classList.add("flex")
+        caja1.classList.add("flex");
        
-        caja2.classList.add("cart-img")
-        caja1.appendChild(caja2)
+        caja2.classList.add("cart-img");
+        caja1.appendChild(caja2);
 
-        caja3.classList.add("cart-nombre")
-        caja1.appendChild(caja3)
+        caja3.classList.add("cart-nombre");
+        caja1.appendChild(caja3);
 
-        caja4.classList.add("cart-precio")
-        caja1.appendChild(caja4)
+        caja4.classList.add("cart-precio");
+        caja4.classList.add("flex");
+        caja4.appendChild(but);
+        caja1.appendChild(caja4);
 
         totalPagar += element.precio;
 
@@ -631,65 +622,26 @@ function readCart() {
         li.appendChild(caja1);
         contenido.appendChild(li);
         // console.log(totalPagar);
-    });
+        }
+    
+
     let totalShow = document.getElementById("total");
     totalShow.innerHTML = ` TOTAL A PAGAR : ${totalPagar}`;
-   
-  
 }
-/* function readCart() {
-    let totalPagar = 0;
-    document.getElementById("listaProductos").innerHTML =`
-    `;
-    let contenido = document.getElementById("listaProductos");
-    shooppingProducts.forEach((element) => {
 
-        // console.log(element.nombre);
+function quitar(element) {
+    let producto = shooppingProducts[element];
 
-        let li = document.createElement("li");
-        let caja1 = document.createElement("div");
-        let caja2 = document.createElement("div");
-        let caja3 = document.createElement("div");
-        let caja4 = document.createElement("div");
+    Swal.fire({
+        title: `¿Seguro de borrar ${producto.nombre} del carrito ?`,
+        showDenyButton: true,
+        confirmButtonText: `Eliminar`,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire('Producto eliminado del carrito!', '', 'success');
+            shooppingProducts.splice(element, 1);
+            readCart();
 
-
-        let nombre = document.createElement("h4");
-        let contenidoN = document.createTextNode(element.nombre);
-        nombre.appendChild(contenidoN);
-        caja3.appendChild(nombre)
-
-        let precio = document.createElement("h2");
-        let contenidoP = document.createTextNode(element.precio);
-        precio.appendChild(contenidoP);
-        caja4.appendChild(precio)
-
-        
-
-        let img = document.createElement("img");
-        
-        img.setAttribute("src", element.foto);
-        caja2.appendChild(img);
-        caja1.classList.add("flex")
-       
-        caja2.classList.add("cart-img")
-        caja1.appendChild(caja2)
-
-        caja3.classList.add("cart-nombre")
-        caja1.appendChild(caja3)
-
-        caja4.classList.add("cart-precio")
-        caja1.appendChild(caja4)
-
-        totalPagar += element.precio;
-
-       
-        li.appendChild(caja1);
-        contenido.appendChild(li);
-        // console.log(totalPagar);
-    });
-    let totalShow = document.getElementById("total");
-    totalShow.innerHTML = ` TOTAL A PAGAR : ${totalPagar}`;
-   
-  
+        }
+    })
 }
- */
